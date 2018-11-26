@@ -1,8 +1,6 @@
 # CodaDocs
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/coda_docs`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+The Coda Docs Ruby library provides convenient access to the [Coda Docs API](https://coda.io/developers/apis/v1beta1) from applications written in the Ruby language.
 
 ## Installation
 
@@ -32,4 +30,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/coda_docs.
+Bug reports and pull requests are welcome on GitHub at https://github.com/cmunozgar/coda_docs.
