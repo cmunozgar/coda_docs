@@ -20,7 +20,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+The library needs to be configured with your account's secret key which is available in your [Coda Docs Dashboard](https://coda.io/account). You can set the required key with the `CODA_DOCS_API_KEY` environment variable
+
+```ruby
+CODA_DOCS_API_KEY=Vau7FXe57Ith6MxcMnT1QSzNZ0o1YZ8s
+
+# New Coda Docs Client
+client = CodaDocs::Client.new
+```
+ or at the moment we create a new client.
+
+```ruby
+require "coda_docs"
+
+# New Coda Docs Client
+client = CodaDocs::Client.new('Vau7FXe57Ith6MxcMnT1QSzNZ0o1YZ8s')
+```
 
 ## Development
 
