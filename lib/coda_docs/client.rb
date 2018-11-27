@@ -27,7 +27,12 @@ module CodaDocs
 
     def initialize(access_token = nil)
       access_token ||= ENV['CODA_DOCS_API_KEY']
-      self.class.default_options.merge!(headers: { 'Authorization' => "Bearer #{access_token}" })
+      self.class.default_options.merge!(
+        headers: {
+          'Authorization' => "Bearer #{access_token}",
+          'Content-Type' => 'application/json'
+        }
+      )
     end
   end
 end

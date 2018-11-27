@@ -9,6 +9,16 @@ module CodaDocs
       def doc(doc_id, options = {})
         self.class.get("/docs/#{doc_id}", query: options)
       end
+
+      def create_doc(title = 'Untitled', source_doc = nil)
+        self.class.post(
+          '/docs',
+          body: {
+            'title' => title,
+            'sourceDoc' => source_doc
+          }.to_json
+        )
+      end
     end
   end
 end
