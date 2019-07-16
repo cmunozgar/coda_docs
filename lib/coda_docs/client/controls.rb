@@ -6,7 +6,7 @@ module CodaDocs
         response.parsed_response['items']
       end
 
-      def formula(doc_id, control_id, options = {})
+      def control(doc_id, control_id, options = {})
         self.class.get("/docs/#{doc_id}/controls/#{control_id}", query: options)
       end
     end
