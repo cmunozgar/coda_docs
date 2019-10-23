@@ -1,3 +1,3 @@
 module CodaDocs
-  VERSION = '0.1.1-beta'.freeze
+  VERSION = '0.1.2'.freeze
 end
