@@ -1,0 +1,19 @@
+---
+version: "2"
+checks:
+  method-complexity:
+    config:
+      threshold: 6
+exclude_patterns:
+  - .bundle/
+  - spec/**/*
+  - benchmarks/**/*
+
+  - bin/
+  - ".*"
+  - "*.json"
+  - "*.ru"
+  - "*.sh"
+  - "*.yml"
+  - "*.md"
+  - "*file*"
