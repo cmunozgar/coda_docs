@@ -75,7 +75,7 @@ jobs:
           name: Publish to Rubygems
           command: |
             gem build coda_docs.gemspec
-            gem push "coda_docs-*.gem"
+            gem push "$(echo coda_docs-*.gem)"
 workflows:
   version: 2
   build-deploy:
