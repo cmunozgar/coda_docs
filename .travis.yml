@@ -1,13 +1,18 @@
----
 sudo: false
 language: ruby
 rvm:
-  - 2.2
-  - 2.3
-  - 2.4
-  - 2.5
-  - 2.6
-  - jruby
+- 2.2
+- 2.3
+- 2.4
+- 2.5
+- 2.6
 before_install:
-  - gem install bundler -v '< 2'
+- gem install bundler -v '< 2'
 cache: bundler
+deploy:
+  provider: rubygems
+  api_key:
+    secure: C9e6OluEe/RMUFY6JDmw5HLoXMiD4w+Gu5yGLyLF4UezkKdyy08y4z1HqooKYR33ePf65tn1EMgQf+2yTJgnh6FLWGe6Kn77+5NozSUqD/LdFeHG3+qq8VQR2fZv5Lf0j433Yyl5if9NOvpTxaVEjtyPZ45ykDoRCz+d1meXDQeEjp8KloBHcJXIWtvSp4nylS34TU+fUaYiiLEPluqIFyrpjHhXQgKb6JuShKZ48/0qRIWcAYeMbrx3ppOZDov41yrkK6XbkKqCPbr+CC9BSX8ObE/kJf68od2XfNH39pgLgp+uxTuGOciZNHfRLbWIxq1PV6or2MB6t19pkLpPzcBkSc3PZopjBCxmXhEOEsDllCTOXwbWcqJj/QB6oQKXLhnVN5I5n84POXKSUmQ/dfZYFnU5surHxMrZBA31QJhS0DImpCsUmY8oo4dJzmN0Iu8WkWUD5myXh8KQ9rJ/jLxlFofcefOz0dfTIvHUrT2D3UBWOfHu0KP0q2JLzMRv0LFS0brvV4hQDxjJJtMMLOj8mmX3dO7iIT33mBVPiO/XiIl/ItZbO5W5rh0iJVLZBTJnyqS4i1m1vkV/MHCR6fl5zGroySaRO2Eg2m1azVT1k/lVSW0pBt4oB70isU3opxldi8LFz30MWhN5mIgtw4GO/TkYmAjV5AMEVb38C0E=
+  on:
+    tags: true
+    branch: master
