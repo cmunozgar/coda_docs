@@ -6,6 +6,7 @@ require 'coda_docs/client/rows'
 require 'coda_docs/client/columns'
 require 'coda_docs/client/formulas'
 require 'coda_docs/client/controls'
+require 'coda_docs/client/views'
 require 'coda_docs/client/account'
 require 'coda_docs/client/miscellaneous'
 
