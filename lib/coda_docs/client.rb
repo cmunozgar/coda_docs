@@ -20,6 +20,7 @@ module CodaDocs
     include CodaDocs::Client::Columns
     include CodaDocs::Client::Formulas
     include CodaDocs::Client::Controls
+    include CodaDocs::Client::Views
     include CodaDocs::Client::Account
     include CodaDocs::Client::Miscellaneous
     base_uri 'https://coda.io/apis/v1beta1'
