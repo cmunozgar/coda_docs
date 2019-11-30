@@ -13,6 +13,11 @@ module CodaDocs
       def delete_row(doc_id, table_id, row_id)
         self.class.delete("/docs/#{doc_id}/tables/#{table_id}/rows/#{row_id}")
       end
+
+      def view_rows(doc_id, view_id, options = {})
+        response = self.class.get("/docs/#{doc_id}/views/#{view_id}/rows", query: options)
+        response.parsed_response['items']
+      end
     end
   end
 end
