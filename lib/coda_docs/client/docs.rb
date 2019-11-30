@@ -10,12 +10,14 @@ module CodaDocs
         self.class.get("/docs/#{doc_id}", query: options)
       end
 
-      def create_doc(title = 'Untitled', source_doc = nil)
+      def create_doc(title: 'Untitled', timezone: 'America/Los_Angeles', source: nil, folder_id: nil)
         self.class.post(
           '/docs',
           body: {
-            'title' => title,
-            'sourceDoc' => source_doc
+            title: title,
+            sourceDoc: source,
+            timezone: timezone,
+            folderId: folder_id
           }.to_json
         )
       end
