@@ -1,6 +1,6 @@
 module CodaDocs
-  class Client
-    module Account
+  module Entities
+    class Account
       def whoami
         self.class.get('/whoami')
       end

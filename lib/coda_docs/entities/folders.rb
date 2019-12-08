@@ -1,6 +1,6 @@
 module CodaDocs
-  class Client
-    module Folders
+  module Entities
+    class Folders
       def folders(doc_id, options = {})
         response = self.class.get("/docs/#{doc_id}/folders", query: options)
         response.parsed_response['items']

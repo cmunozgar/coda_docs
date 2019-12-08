@@ -1,6 +1,6 @@
 module CodaDocs
-  class Client
-    module Columns
+  module Entities
+    class Columns
       def columns(doc_id, table_id, options = {})
         response = self.class.get("/docs/#{doc_id}/tables/#{table_id}/columns", query: options)
         response.parsed_response['items']

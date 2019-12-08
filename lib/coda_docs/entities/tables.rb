@@ -1,6 +1,6 @@
 module CodaDocs
-  class Client
-    module Tables
+  module Entities
+    class Tables
       def tables(doc_id, options = {})
         response = self.class.get("/docs/#{doc_id}/tables", query: options)
         response.parsed_response['items']

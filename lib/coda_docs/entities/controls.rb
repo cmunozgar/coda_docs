@@ -1,6 +1,6 @@
 module CodaDocs
-  class Client
-    module Controls
+  module Entities
+    class Controls
       def controls(doc_id, options = {})
         response = self.class.get("/docs/#{doc_id}/controls", query: options)
         response.parsed_response['items']
