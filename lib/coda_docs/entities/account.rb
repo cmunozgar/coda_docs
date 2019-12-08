@@ -1,8 +1,10 @@
 module CodaDocs
   module Entities
     class Account
-      def whoami
-        self.class.get('/whoami')
+      class << self
+        def whoami
+          CodaDocs::Connection.get('/whoami')
+        end
       end
     end
   end
