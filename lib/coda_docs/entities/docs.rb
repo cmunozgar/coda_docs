@@ -1,16 +1,16 @@
 module CodaDocs
   module Entities
     class Docs
-      def docs(options = {})
+      def all(options = {})
         response = self.class.get('/docs', query: options)
         response.parsed_response['items']
       end
 
-      def doc(doc_id, options = {})
+      def find(doc_id, options = {})
         self.class.get("/docs/#{doc_id}", query: options)
       end
 
-      def create_doc(title: 'Untitled', timezone: 'America/Los_Angeles', source: nil, folder_id: nil)
+      def create(title: 'Untitled', timezone: 'America/Los_Angeles', source: nil, folder_id: nil)
         self.class.post(
           '/docs',
           body: {
