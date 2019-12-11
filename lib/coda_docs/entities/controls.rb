@@ -1,13 +1,13 @@
 module CodaDocs
   module Entities
     class Controls < Entity
-      def all(doc_id, options = {})
-        response = connection.get("/docs/#{doc_id}/controls", query: options)
+      def all(doc_id)
+        response = connection.get("/docs/#{doc_id}/controls")
         response.parsed_response['items']
       end
 
-      def find(doc_id, control_id, options = {})
-        connection.get("/docs/#{doc_id}/controls/#{control_id}", query: options)
+      def find(doc_id:, control_id:)
+        connection.get("/docs/#{doc_id}/controls/#{control_id}")
       end
     end
   end
