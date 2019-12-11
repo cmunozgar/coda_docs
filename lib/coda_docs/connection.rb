@@ -5,5 +5,3 @@ module CodaDocs
     format :json
   end
 end
-
-# CodaDocs::Connection
