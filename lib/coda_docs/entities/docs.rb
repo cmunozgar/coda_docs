@@ -2,16 +2,16 @@ module CodaDocs
   module Entities
     class Docs < Entity
       def all(options = {})
-        response = CodaDocs::Connection.get('/docs', query: options)
+        response = connection.get('/docs', query: options)
         response.parsed_response['items']
       end
 
       def find(doc_id, options = {})
-        CodaDocs::Connection.get("/docs/#{doc_id}", query: options)
+        connection.get("/docs/#{doc_id}", query: options)
       end
 
       def create(title: 'Untitled', timezone: 'America/Los_Angeles', source: nil, folder_id: nil)
-        CodaDocs::Connection.post(
+        connection.post(
           '/docs',
           body: {
             title: title,
