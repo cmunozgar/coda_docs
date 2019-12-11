@@ -3,7 +3,7 @@ module CodaDocs
     class Folders < Entity
       def all(doc_id)
         response = connection.get("/docs/#{doc_id}/folders", query: options)
-        response.parsed_response['items']
+        parse_response(response)
       end
 
       def find(doc_id:, folder_id:)

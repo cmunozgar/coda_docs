@@ -3,7 +3,7 @@ module CodaDocs
     class Sections < Entity
       def all(doc_id)
         response = connection.get("/docs/#{doc_id}/sections")
-        response.parsed_response['items']
+        parse_response(response)
       end
 
       def find(doc_id:, section_id:)

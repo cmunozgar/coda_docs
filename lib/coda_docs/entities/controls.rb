@@ -3,7 +3,7 @@ module CodaDocs
     class Controls < Entity
       def all(doc_id)
         response = connection.get("/docs/#{doc_id}/controls")
-        response.parsed_response['items']
+        parse_response(response)
       end
 
       def find(doc_id:, control_id:)

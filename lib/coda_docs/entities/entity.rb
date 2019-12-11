@@ -5,6 +5,10 @@ module CodaDocs
         @access_token = access_token
       end
 
+      def parse_response(response)
+        response.parsed_response['items']
+      end
+
       def connection
         conn = CodaDocs::Connection
         conn.default_options.merge!(

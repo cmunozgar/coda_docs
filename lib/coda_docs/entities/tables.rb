@@ -3,7 +3,7 @@ module CodaDocs
     class Tables < Entity
       def all(doc_id)
         response = connection.get("/docs/#{doc_id}/tables")
-        response.parsed_response['items']
+        parse_response(response)
       end
 
       def find(doc_id:, table_id:)

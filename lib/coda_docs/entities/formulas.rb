@@ -3,7 +3,7 @@ module CodaDocs
     class Formulas < Entity
       def all(doc_id)
         response = connection.get("/docs/#{doc_id}/formulas", query: options)
-        response.parsed_response['items']
+        parse_response(response)
       end
 
       def find(doc_id:, formula_id:)
