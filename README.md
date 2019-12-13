@@ -23,20 +23,21 @@ Or install it yourself as:
 The library needs to be configured with your account's secret key which is available in your [Coda Docs Dashboard](https://coda.io/account). You can set the required key with the `CODA_DOCS_API_KEY` environment variable
 
 ```ruby
-CODA_DOCS_API_KEY=Vau7FXe57Ith6MxcMnT1QSzNZ0o1YZ8s
+CODA_DOCS_API_KEY=my_secret_key
 
 # New Coda Docs Client
 client = CodaDocs::Client.new
 ```
- or at the moment we create a new client.
+ or by instantiating a new client with your secret key.
 
 ```ruby
 require "coda_docs"
 
 # New Coda Docs Client
-client = CodaDocs::Client.new('Vau7FXe57Ith6MxcMnT1QSzNZ0o1YZ8s')
+client = CodaDocs::Client.new(my_secret_key)
 ```
 
+Click [here](https://github.com/cmunozgar/coda_docs/wiki) for more usage info.
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
