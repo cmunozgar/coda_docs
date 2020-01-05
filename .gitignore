@@ -2,6 +2,7 @@
 *.rbc
 .ruby-version
 .byebug_history
+.rspec_status
 /.config
 /coverage/
 /InstalledFiles

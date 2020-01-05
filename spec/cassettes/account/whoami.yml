@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coda.io/apis/v1beta1/whoami
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer a2471620-b45f-415a-9f61-7e396c000d93
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 05 Jan 2020 16:06:01 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '163'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - user_consent=eyJhbmFseXRpY3NBbGxvd2VkIjp0cnVlLCJhZHZlcnRpc2luZ0FsbG93ZWQiOnRydWV9;
+        path=/; expires=Wed, 02 Jan 2030 16:06:01 GMT; domain=coda.io
+      Vary:
+      - Origin, Accept-Encoding
+      Etag:
+      - W/"a3-v5w1043CMi3UFQLFJFK6vL7/hmE"
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"name":"ojewale olaide","loginId":"ojewaleolaide@gmail.com","type":"user","href":"https://coda.io/apis/v1beta1/whoami","tokenName":"gem-api-token","scoped":false}'
+    http_version: 
+  recorded_at: Sun, 05 Jan 2020 16:06:01 GMT
+recorded_with: VCR 5.0.0
