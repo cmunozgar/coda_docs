@@ -7,17 +7,17 @@ RSpec.describe CodaDocs::Entities::Tables do
   # table returns an id for now. See SpecEntitiesCreator for more
   let(:table_id) { creator.table }
 
-  it 'get all tables in a document' do
+  it 'gets all tables in a document' do
     response = VCR.use_cassette('tables/all') {
       subject.all(doc_id)
     }
 
     res = response.first
 
-    expect(res.keys).to include('name', 'type', 'href', 'id')
+    expect(response).to be_an Array
     expect(res['name']).not_to be nil
     expect(res['type']).to eq "table"
-    expect(response).to be_an Array
+    expect(res.keys).to include('name', 'type', 'href', 'id')
   end
 
   it 'finds a table in a document' do
@@ -25,8 +25,8 @@ RSpec.describe CodaDocs::Entities::Tables do
       subject.find(doc_id: doc_id, table_id: table_id)
     }
 
-    expect(res.keys).to include('name', 'type', 'href', 'id')
     expect(res['name']).not_to be nil
-    expect(res['type']).to eq "table"
+    expect(res['type']).to eq 'table'
+    expect(res.keys).to include('name', 'type', 'href', 'id')
   end
 end

@@ -13,19 +13,20 @@ RSpec.describe CodaDocs::Entities::Columns do
     }
   end
 
-  it 'get all columns in a document tables' do
-    expect(@columns.first['type']).to eq 'column'
+  it 'gets all columns in a document\'s table' do
     expect(@columns).to be_an Array
+    expect(@columns.first['type']).to eq 'column'
   end
 
-  it 'get all columns in a document tables' do
+  it 'gets a column from a document\'s table' do
     column_id = @columns.first['id']
+
     res = VCR.use_cassette('columns/find') {
       subject.find(doc_id: doc_id, table_id: table_id, column_id: column_id)
     }
 
-    expect(res.keys).to include('name', 'parent', 'type', 'href', 'display')
     expect(res['type']).to eq 'column'
     expect(res['parent']['type']).to eq 'table'
+    expect(res.keys).to include('name', 'parent', 'type', 'href', 'display')
   end
 end
