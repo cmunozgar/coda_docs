@@ -1,7 +1,7 @@
 require "spec_helper"
 
 RSpec.describe CodaDocs::Entities::Tables do
-  let(:subject) { described_class.new(ENV['CODA_DOCS_API_KEY']) }
+  subject { described_class.new(ENV['CODA_DOCS_API_KEY']) }
   let(:creator) { SpecEntitiesCreator.new }
   let(:doc_id) { creator.doc['id'] }
   # table returns an id for now. See SpecEntitiesCreator for more

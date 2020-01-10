@@ -1,7 +1,7 @@
 require "spec_helper"
 
 RSpec.describe CodaDocs::Entities::Account do
-  let(:subject) { described_class.new(ENV['CODA_DOCS_API_KEY']) }
+  subject { described_class.new(ENV['CODA_DOCS_API_KEY']) }
 
   it 'gets user account info on coda' do
     res = VCR.use_cassette('account/whoami') { subject.whoami }

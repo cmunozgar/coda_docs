@@ -1,7 +1,7 @@
 require "spec_helper"
 
 RSpec.describe CodaDocs::Client do
-  let(:subject) { described_class.new }
+  subject { described_class.new }
 
   it 'has an access token' do
     expect(subject.send(:access_token)).not_to be nil
