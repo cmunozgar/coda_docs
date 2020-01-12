@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coda.io/apis/v1beta1/docs/Yuypr0WRkq/tables/grid-7wlFDEirg4/columns/c-BWoZD1pDLj
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - "<BEARER_TOKEN>"
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 10 Jan 2020 00:10:40 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '423'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - user_consent=eyJhbmFseXRpY3NBbGxvd2VkIjp0cnVlLCJhZHZlcnRpc2luZ0FsbG93ZWQiOnRydWV9;
+        path=/; expires=Mon, 07 Jan 2030 00:10:39 GMT; domain=coda.io
+      Vary:
+      - Origin, Accept-Encoding
+      Etag:
+      - W/"1a7-XIGMbQzK1M9xUKhQfl3Vj6nNR24"
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"id":"c-BWoZD1pDLj","type":"column","name":"Column 1","href":"https://coda.io/apis/v1beta1/docs/Yuypr0WRkq/tables/grid-7wlFDEirg4/columns/c-BWoZD1pDLj","display":true,"format":{"type":"text","isArray":false},"parent":{"id":"grid-7wlFDEirg4","type":"table","href":"https://coda.io/apis/v1beta1/docs/Yuypr0WRkq/tables/grid-7wlFDEirg4","browserLink":"https://coda.io/d/_dYuypr0WRkq#_tugrid-7wlFDEirg4","name":"Test
+        Table 1"}}'
+    http_version: 
+  recorded_at: Fri, 10 Jan 2020 00:10:40 GMT
+recorded_with: VCR 5.0.0

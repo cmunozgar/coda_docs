@@ -1,4 +1,5 @@
 require 'bundler/setup'
+Dir[File.join(__dir__, 'support', '*.rb')].each { |f| require f }
 require 'coda_docs'
 
 RSpec.configure do |config|

@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://coda.io/apis/v1beta1/docs
+    body:
+      encoding: UTF-8
+      string: '{"title":"Untitled","sourceDoc":null,"timezone":"America/Los_Angeles","folderId":null}'
+    headers:
+      Authorization:
+      - "<BEARER_TOKEN>"
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 09 Jan 2020 23:23:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '292'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - user_consent=eyJhbmFseXRpY3NBbGxvd2VkIjp0cnVlLCJhZHZlcnRpc2luZ0FsbG93ZWQiOnRydWV9;
+        path=/; expires=Sun, 06 Jan 2030 23:23:09 GMT; domain=coda.io
+      Vary:
+      - Origin, Accept-Encoding
+      Etag:
+      - W/"124-EbNCVTw1uGnWnCYJOwd4Ov3PZ6E"
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+    body:
+      encoding: UTF-8
+      string: '{"id":"Yuypr0WRkq","type":"doc","href":"https://coda.io/apis/v1beta1/docs/Yuypr0WRkq","browserLink":"https://coda.io/d/_dYuypr0WRkq","name":"Untitled","owner":"ojewaleolaide@gmail.com","ownerName":"ojewale
+        olaide","createdAt":"2020-01-09T23:23:09.301Z","updatedAt":"2020-01-09T23:23:09.370Z"}'
+    http_version: 
+  recorded_at: Thu, 09 Jan 2020 23:23:09 GMT
+recorded_with: VCR 5.0.0
