@@ -1,7 +1,7 @@
 module CodaDocs
   module Entities
     class Docs < Entity
-      def all
+      def all(options = nil)
         response = connection.get('/docs', query: options)
         parse_response(response)
       end
