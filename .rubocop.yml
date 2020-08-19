@@ -1,6 +1,6 @@
 AllCops:
-  TargetRubyVersion: 2.3
-  Excludes:
+  TargetRubyVersion: 2.4
+  Exclude:
     - app/admin/*.rb
     - db/migrate/*.rb
 
