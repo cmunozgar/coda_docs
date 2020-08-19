@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    coda_docs (1.0.0)
+    coda_docs (1.0.1)
       activesupport
       httparty
 
