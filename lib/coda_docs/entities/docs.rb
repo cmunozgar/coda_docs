@@ -10,15 +10,10 @@ module CodaDocs
         connection.get("/docs/#{doc_id}")
       end
 
-      def create(title: 'Untitled', timezone: 'America/Los_Angeles', source_doc: nil, folder_id: nil)
+      def create(options)
         connection.post(
           '/docs',
-          body: {
-            title: title,
-            sourceDoc: source_doc,
-            timezone: timezone,
-            folderId: folder_id
-          }.to_json
+          body: options.to_json
         )
       end
 
@@ -26,16 +21,10 @@ module CodaDocs
         connection.delete("/docs/#{doc_id}")
       end
 
-      def publish(doc_id:, slug:, discoverable:, earn_credit:, category_names:, mode:)
+      def publish(doc_id, options)
         connection.put(
           "/docs/#{doc_id}/publish",
-          body: {
-            slug: slug,
-            discoverable: discoverable,
-            earnCredit: earn_credit,
-            categoryNames: category_names,
-            mode: mode
-          }.to_json
+          body: options.to_json
         )
       end
 

@@ -10,15 +10,10 @@ module CodaDocs
         connection.get("/docs/#{doc_id}/pages/#{page_id}", query: options)
       end
 
-      def update(doc_id:, page_id:, name:, subtitle:, icon_name:, image_url:)
+      def update(doc_id, page_id, options)
         connection.put(
           "/docs/#{doc_id}/pages/#{page_id}",
-          body: {
-            name: name,
-            subtitle: subtitle,
-            iconName: icon_name,
-            imageUrl: image_url
-          }.to_json
+          body: options.to_json
         )
       end
     end
