@@ -1,7 +1,7 @@
 module CodaDocs
   module Entities
     class Folders < Entity
-      def all(doc_id)
+      def all(doc_id, options = nil)
         response = connection.get("/docs/#{doc_id}/folders", query: options)
         parse_response(response)
       end

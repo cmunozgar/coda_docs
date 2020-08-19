@@ -6,7 +6,7 @@ module CodaDocs
         parse_response(response)
       end
 
-      def find(doc_id:, page_id:)
+      def find(doc_id, page_id, options = nil)
         connection.get("/docs/#{doc_id}/pages/#{page_id}", query: options)
       end
 
