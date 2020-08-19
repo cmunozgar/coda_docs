@@ -6,7 +6,7 @@ module CodaDocs
         parse_response(response)
       end
 
-      def find(doc_id:, table_id:, column_id:)
+      def find(doc_id, table_id, column_id)
         connection.get("/docs/#{doc_id}/tables/#{table_id}/columns/#{column_id}")
       end
     end

@@ -6,7 +6,7 @@ module CodaDocs
         parse_response(response)
       end
 
-      def find(doc_id:, control_id:)
+      def find(doc_id, control_id)
         connection.get("/docs/#{doc_id}/controls/#{control_id}")
       end
     end

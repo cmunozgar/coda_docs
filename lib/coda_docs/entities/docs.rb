@@ -22,7 +22,7 @@ module CodaDocs
         )
       end
 
-      def delete(doc_id:)
+      def delete(doc_id)
         connection.delete("/docs/#{doc_id}")
       end
 
@@ -39,7 +39,7 @@ module CodaDocs
         )
       end
 
-      def unpublish(doc_id:)
+      def unpublish(doc_id)
         connection.delete("/docs/#{doc_id}/publish")
       end
     end
