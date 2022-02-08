@@ -19,6 +19,17 @@ module CodaDocs
         )
         conn
       end
+
+      def paginate_response(response)
+        response_list = parse_response(response)
+
+        while parse_response(response, field: 'nextPageLink')
+          response = connection.get(parse_response(response, field: 'nextPageLink'))
+          response_list << parse_response(response)
+        end
+
+        response_list.flatten
+      end
     end
   end
 end
