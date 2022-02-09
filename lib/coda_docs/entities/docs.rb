@@ -3,7 +3,7 @@ module CodaDocs
     class Docs < Entity
       def all(options = nil)
         response = connection.get('/docs', query: options)
-        parse_response(response)
+        paginate_response(response)
       end
 
       def find(doc_id)
