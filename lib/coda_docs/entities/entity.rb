@@ -5,8 +5,8 @@ module CodaDocs
         @access_token = access_token
       end
 
-      def parse_response(response)
-        response.parsed_response['items']
+      def parse_response(response, field: 'items')
+        response.parsed_response[field]
       end
 
       def connection
